@@ -1,0 +1,3 @@
+[submodule "angular7-crud-example"]
+	path = angular7-crud-example
+	url = https://github.com/only2dhir/angular7-crud-example.git
