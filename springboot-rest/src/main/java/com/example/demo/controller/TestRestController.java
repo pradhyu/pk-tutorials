@@ -11,8 +11,12 @@ public class TestRestController {
 
     @ResponseBody
     @GetMapping(value="/timeout")
-    public  int timeout(@RequestParam(value="seconds") int seconds) throws InterruptedException {
-       Thread.sleep(seconds) ;
+    public Integer timeout(@RequestParam(value="seconds") int seconds) throws InterruptedException {
+
+        for(int i=1 ; i<= seconds/1000; i++){
+            Thread.sleep(1000) ;
+            System.out.println(i + " Seconds passed");
+        }
        return seconds;
     }
 
